@@ -5,4 +5,4 @@ It works for any city, but you have to create a table and modify the program acc
 
 Here is a sample of the data from Cleveland:
 
-![alt text](https://github.com/TheRishMan/Python-YP-Businesses/blob/master/Example%20Table%20Data.JPG "Table Data")
+![alt text](https://github.com/rishiso/Python-YP-Businesses/blob/master/Example%20Table%20Data.JPG "Table Data")
