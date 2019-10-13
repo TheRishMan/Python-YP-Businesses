@@ -8,7 +8,7 @@ start_time = time.time()
 
 #Importing various libraries
 
-con = sqlite3.connect("YP_Businesses.db")
+con = sqlite3.connect("YP_Business.db")
 cur = con.cursor()
 #Connecting to SQL Database
 
