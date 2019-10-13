@@ -4,4 +4,5 @@ This is a data aggregator that can extract the data from a Yellow Pages city pag
 It works for any city, but you have to create a table and modify the program accordingly beforehand.
 
 Here is a sample of the data from Cleveland:
+
 ![alt text](https://github.com/TheRishMan/Python-YP-Businesses/blob/master/Example%20Table%20Data.JPG "Table Data")
