@@ -1,7 +1,7 @@
 # Python-YP-Businesses
 This is a data aggregator that can extract the data from a Yellow Pages city page (Ex. https://www.yellowpages.com/cleveland-tn) into an SQL database.
 
-It works for any city, but you have to create a table and modify the program accordingly beforehand.
+It works for any city, but you have to create a table and modify the program accordingly beforehand. It collects the name, address, phone number, and category for every business in the city.
 
 Here is a sample of the data from Cleveland:
 
