@@ -12,10 +12,16 @@ con = sqlite3.connect("YP_Business.db")
 cur = con.cursor()
 #Connecting to SQL Database
 
+city_name = "Cleveland"
+cur.execute("CREATE TABLE IF NOT EXISTS " + city_name + "(Name TEXT PRIMARY KEY, Category TEXT, Phone TEXT, Address TEXT)")
+#Creating table
+#Please change table name to proper city
+
 res = requests.get("https://www.yellowpages.com/cleveland-tn")
 src = res.content
 soup = BeautifulSoup(src, 'lxml')
 #Retrieving and parsing web content
+#Please change url to correct city
 
 section = soup.find('section' , {'class', 'popular-cats'})
 for i in section.find_all('a'):
@@ -41,12 +47,12 @@ for i in section.find_all('a'):
                 addr += " "
                 addr += (i.find('div', {'class', 'locality'})).string
             except:
-                addr = 'Cleveland Area'
-            cur.execute("INSERT OR IGNORE INTO Cleveland VALUES(?,?,?,?)" , (name, cat, phone, addr))
+                addr = city_name + "Area"
+            cur.execute("INSERT OR IGNORE INTO " + city_name + " VALUES(?,?,?,?)", (name, cat, phone, addr))
 #Retrieving data and inserting it into SQL Table
 
 con.commit()
 con.close()
 #Saving changes and closing database
 
-print(time.time() - start_time)
+print(int(time.time() - start_time))
