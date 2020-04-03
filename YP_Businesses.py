@@ -8,7 +8,7 @@ start_time = time.time()
 
 #Importing various libraries
 
-con = sqlite3.connect("YP_Business.db")
+con = sqlite3.connect(r"C:\Users\rishi\OneDrive\Documents\Programming\Python\Projects\YP_Business.db")
 cur = con.cursor()
 #Connecting to SQL Database
 
@@ -47,7 +47,7 @@ for i in section.find_all('a'):
                 addr += " "
                 addr += (i.find('div', {'class', 'locality'})).string
             except:
-                addr = city_name + "Area"
+                addr = city_name + " Area"
             cur.execute("INSERT OR IGNORE INTO " + city_name + " VALUES(?,?,?,?)", (name, cat, phone, addr))
 #Retrieving data and inserting it into SQL Table
 
@@ -55,4 +55,4 @@ con.commit()
 con.close()
 #Saving changes and closing database
 
-print(int(time.time() - start_time))
+print(f"Run Time: {int(time.time() - start_time)} seconds")
